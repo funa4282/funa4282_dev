@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@mixin sm {
+    @media (min-width: ($sm)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: ($md)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: ($lg)) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: ($xl)) {
+        @content;
+    }
+}
+
+$sm: 34em;
+$md: 48em;
+$lg: 62em;
+$xl: 75em;
+
+html {
+    font-size: 62.5%;
+    font-weight: 300;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #1a1a33;
+}
+
+.current {
+    border-bottom: #fff .1px solid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.border {
+    border-bottom: solid 1px #1a1a33;
+}
+
+.rect {
+    position: absolute;
+    top: 0;
+    // right: 0;
+    left: 0;
+    width: 70vw;
+    height: 440px;
+    background: linear-gradient(135deg, #4bd3ff, #003CC4);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+
+    @include lg {
+        width: 60vw;
+    }
+}
+
+.about-img {
+    width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    display: none;
+
+    @include md {
+        display: block;
+    }
+
+    @include lg {
+        width: 80%;
+    }
+}
+
+.about-img--schedule {
+    position: relative;
+    width: 100%;
+}
+
+.parallax-img {
+    width: 100%;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    
+    @include md {
+        display: none;
+    }
+}
+
+.undecided {
+    color: #eb3939;
+}
+
+.tmp {
+    font-size: 12px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(135deg, #4bd3ff, #003CC4);
+}
+
+.lock {
+    color: #cccccc;
+}
+
+@import "menu";
+@import "kv";
+@import "section-wrapper";
+@import "section-inner";
+@import "flex-container";
+@import "schedule";
+@import "summary";
+@import "button";
+@import "parallax";
+@import "vertical";
+@import "footer";
+
+.btn_lock {
+    background: linear-gradient(135deg, #aaaaaa, #666666);
+    pointer-events: none;
+}
+
+.c-button {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.p-hamburger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    // left: 0;
+    right: 6%;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2rem transparent;
+    outline: none;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+
+    @include md {
+        display: none;
+    }
+}
+
+.p-hamburger:hover,
+.p-hamburger:focus {
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .5 );
+}
+
+.p-hamburger__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    transition: inherit;
+}
+
+.p-hamburger__line::before,
+.p-hamburger__line::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transition: inherit;
+}
+
+.p-hamburger__line::before {
+    top: -5px;
+}
+
+.p-hamburger__line::after {
+    top: 5px;
+}
+
+.u-visuallyHidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%); 
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line {
+    background-color: transparent;
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before,
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+    top: 0;
+    background-color: #fff;
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::before {
+    transform: rotate(45deg);
+}
+
+.p-hamburger[aria-expanded="true"] .p-hamburger__line::after {
+    transform: rotate(-45deg);
+}
+
+.p-drawer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4bd3ff, #003CC4);
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+}
+
+.is-drawerActive .p-drawer {
+    transform: translateX(0);
+}
+
+.drawer__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.2rem;
+}

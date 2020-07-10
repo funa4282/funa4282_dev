@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.button {
+    display: inline-block;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: none;
+    color: #FFF;
+    background: linear-gradient(135deg, #FFD62B, #FFA700);
+    font-size: 1.4rem;
+    width: 220px;
+    height: 60px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+
+    &:hover {
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, .3);
+    }
+
+    @include md {
+        font-size: 1.6rem;
+        width: 280px;
+        height: 60px;
+    }
+
+    &--lg {
+        font-size: 2.2rem;
+        width: 100%;
+
+        @include md {
+            font-size: 2.4rem;
+        }
+    }
+}

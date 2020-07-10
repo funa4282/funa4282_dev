@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+.schedule {
+    width: 240px;
+
+    @include md {
+        width: 300px;
+    }
+
+    &__wrapper + &__wrapper {
+        border-top: solid 1px #1a1a33;
+    }
+    
+    &__title {
+        display: inline-block;
+        width: 60px;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+
+        @include md {
+            font-size: 1.8em;
+            margin-top: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+    
+    &__content {
+        display: inline-block;
+        font-size: 1.6rem;
+
+        @include md {
+            font-size: 1.8em;
+        }
+    }
+    
+    &__content:before {
+        content: ":";
+        margin: 0 1.8rem;
+    }
+}

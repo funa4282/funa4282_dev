@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.summary {
+    font-weight: 300;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 0 8rem;
+    padding: 40px 56px;
+    background-color: #efefef;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+
+    &__content {
+        padding: 12px 0;
+    }
+    
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        line-height: 1.75;
+    }
+}

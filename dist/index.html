@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shunsuke Funada">
+    <meta name="description" content="TokaiSummerWorkshop2020のWebサイト">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/summer-icon.png?rev=0e97f6a7cc9d05ab" type="image/png">
+    <title>TSW2020</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/app.min.css?rev=0e97f6a7cc9d05ab">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.11.0/rellax.min.js"></script>
+    <script type="text/javascript" src="./js/app.min.js?rev=0e97f6a7cc9d05ab" defer></script>
+    <meta property="og:title" content="TSW2020">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="TokaiSummerWorkshop2020のWebサイト">
+    <meta property="og:url" content="https://tsw2020.teamdigicom.net/">
+    <meta property="og:site_name" content="TSW2020">
+    <meta property="og:image" content="https://tsw2020.teamdigicom.net/images/workshop.jpg">
+</head>
+<body>
+    <!-- メニュー -->
+    <header class="menu">
+        <h1 class="menu__title"><a href="#Home" class="menu__item menu__item--lg">TOKAI SUMMER WORKSHOP 2020</a></h1>
+        <div class="menu__horizontal">
+            <a href="#About" class="menu__item menu__item--horizontal">ABOUT</a>
+            <a href="#Details" class="menu__item menu__item--horizontal">DETAILS</a>
+            <a href="#Schedule" class="menu__item menu__item--horizontal">SCHEDULE</a>
+            <a href="#Manual" class="menu__item menu__item--horizontal">MANUAL</a>
+        </div>
+        <button type="button" id="js-buttonHamburger" class="c-button p-hamburger" aria-controls="global-nav" aria-expanded="false">
+            <span class="p-hamburger__line">
+                <span class="u-visuallyHidden">
+                    メニューを開閉する
+                </span>
+            </span>
+        </button>
+        <div class="p-drawer">
+            <div class="drawer__menu">
+                <a href="#About" class="menu__item">ABOUT</a>
+                <a href="#Details" class="menu__item">DETAILS</a>
+                <a href="#Schedule" class="menu__item">SCHEDULE</a>
+                <a href="#Manual" class="menu__item">MANUAL</a>
+            </div>
+        </div>
+    </header>
+    <div id="Home">
+        <div class="kv">
+            <div class="kv__bg">
+                <div class="kv__text-block kv__text kv__text--white">
+                    <p class="kv__text--white">TOKAI<br>SUMMER<br>WORKSHOP<br>2020</p>
+                </div>
+            </div>
+            <div class="kv__text-block kv__text kv__text--navy">
+                <div class="kv__text-inner">
+                    <p class="kv__text">TOKAI<br>SUMMER<br>WORKSHOP<br>2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="About">
+        <div class="about">
+            <div class="section-wrapper">
+                <h2 class="section-wrapper__title">ABOUT</h2>
+                <div class="section-inner">
+                    <h3 class="section-inner__title">TOKAI SUMMER WORKSHOPとは</h3>
+                    <p class="section-inner__description">
+                        毎年夏に開催される，学生が主体となって運営するワークショップです．
+                        <br>
+                        2020年はオンライン(Zoom)で開催し，愛知工業大学の澤野研究室が運営を行います．
+                        <br>
+                        参加費は無料です．
+                    </p>
+                    <div class="about-img">
+                        <img src="./images/about.jpg?rev=0e97f6a7cc9d05ab" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-img">
+            <img src="./images/about.jpg?rev=0e97f6a7cc9d05ab" alt="">
+        </div>
+    </div>
+    <div id="Details">
+        <div class="vertical">
+            <figure class="rellax vertical__sentence vertical__sentence--left" data-rellax-speed="4">ORAL SESSION</figure>
+            <figure class="rellax vertical__sentence vertical__sentence--right" data-rellax-speed="6">POSTER SESSION</figure>
+        </div>
+        <div class="section-wrapper">
+            <h2 class="section-wrapper__title">DETAILS</h2>
+            <div class="section-inner">
+                <h3 class="section-inner__title">オーラル発表について</h3>
+                <h4 class="section-inner__subtitle">発表時間</h4>
+                <p class="section-inner__description">
+                    発表時間は次の2通りです．
+                    <br>
+                    5分発表 (発表3分 質疑応答2分)
+                    <br>
+                    7分発表 (発表5分 質疑応答2分)
+                </p>
+                <h4 class="section-inner__subtitle">募集人数</h4>
+                <p class="section-inner__description">
+                    5分発表: 10組(受付先着順)
+                    <br>
+                    7分発表: 5組(受付先着順)
+                </p>
+                <h4 class="section-inner__subtitle">発表方法</h4>
+                <p class="section-inner__description">
+                    一人ずつ発表を行います．
+                    <br>
+                    他の参加者は全員聴講者となります．
+                </p>
+            </div>
+            <div class="section-inner">
+                <h3 class="section-inner__title">ポスター発表について</h3>
+                <h4 class="section-inner__subtitle">発表時間</h4>
+                <p class="section-inner__description">
+                    総発表時間は40分(1ターン10分程度)を予定しています．
+                </p>
+                <h4 class="section-inner__subtitle">募集人数</h4>
+                <p class="section-inner__description">
+                    85組(受付先着順)
+                </p>
+                <h4 class="section-inner__subtitle">発表方法</h4>
+                <p class="section-inner__description">
+                    1セクションで複数人が発表を行います．
+                    <br>
+                    発表者一人につき，一つZoomの部屋を用意します．
+                    <br>
+                    聴講者の方は，その部屋を自由に出入りしていただく形となります．
+                    <br>
+                    ※1ターン目のみ，運営で部屋を割り振らせていただきます．
+                </p>
+            </div>
+            <div class="section-inner">
+                <h3 class="section-inner__title">会場について</h3>
+                <h4 class="section-inner__subtitle">オーラル発表</h4>
+                <p class="section-inner__description">
+                    オンライン(Zoom)
+                </p>
+                <h4 class="section-inner__subtitle">ポスター発表</h4>
+                <p class="section-inner__description">
+                    オンライン(Zoom)
+                </p>
+            </div>
+            <div class="summary">
+                <div class="summary__content">
+                    <p class="summary__title border">日時</p>
+                    <p class="summary__description">
+                        8/27(木) 時間は未定
+                        <br>
+                        8/28(金) 時間は未定
+                    </p>
+                </div>
+                <div class="summary__content">
+                    <p class="summary__title border">場所</p>
+                    <p class="summary__description">オンライン(Zoom)</p>
+                </div>
+                <div class="summary__content">
+                    <p class="summary__title border">参加方法</p>
+                    <p class="summary__description">サイト下部の<a href="#Entry">エントリー</a>よりご応募ください</p>
+                </div>
+                <div class="summary__content">
+                    <p class="summary__title border">参加費</p>
+                    <p class="summary__description">無料</p>
+                </div>
+                <div class="summary__content">
+                    <p class="summary__title border">運営</p>
+                    <p class="summary__description">愛知工業大学 澤野研究室</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Schedule">
+        <div class="section-wrapper">
+            <h2 class="section-wrapper__title">SCHEDULE</h2>
+            <div class="about-img--schedule">
+                <div class="rellax parallax parallax--3" data-rellax-speed="4">
+                    <img src="./images/schedule_1.jpg?rev=0e97f6a7cc9d05ab" alt="">
+                </div>
+                <div class="rellax parallax parallax--4" data-rellax-speed="2">
+                    <img src="./images/schedule_2.jpg?rev=0e97f6a7cc9d05ab" alt="">
+                </div>
+            </div>
+            <div class="section-inner">
+                <h3 class="section-inner__title">全体のスケジュール</h3>
+                <div class="schedule">
+                    <div class="schedule__wrapper">
+                        <p class="schedule__title">7/31(金)</p>
+                        <p class="schedule__content">参加登録締切</p>
+                    </div>
+                    <div class="schedule__wrapper">
+                        <p class="schedule__title">8/21(金)</p>
+                        <p class="schedule__content">発表タイトル締切</p>
+                    </div>
+                    <div class="schedule__wrapper">
+                        <p class="schedule__title">8/25(火)</p>
+                        <p class="schedule__content">プログラム確定</p>
+                    </div>
+                    <div class="schedule__wrapper">
+                        <p class="schedule__title">8/27(木)</p>
+                        <p class="schedule__content">発表</p>
+                    </div>
+                    <div class="schedule__wrapper">
+                        <p class="schedule__title">8/28(金)</p>
+                        <p class="schedule__content">発表</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-inner">
+                <h3 class="section-inner__title">当日のスケジュール</h3>
+                <p class="section-inner__description">8月25日(火)公開予定</p>
+                <p class="section-inner__description lock">発表者，発表タイトルなどについて記してあります．</p>
+                <div class="schedule">
+                    <button class="button btn_lock" type="button" onclick="location.href='https://drive.google.com/uc?export=download&id=1kNFdgeKFn7JRINdx7fTMavMba1mJ5fQS'">スケジュールのダウンロード</button>
+                    <p class="tmp lock">※配布パスワードで解凍してください</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Manual">
+        <div class="section-wrapper">
+            <h2 class="section-wrapper__title">MANUAL</h2>
+            <div class="section-inner">
+                <h3 class="section-inner__title">Zoomマニュアル</h3>
+                <p class="section-inner__description">8月10日(月)公開予定</p>
+                <p class="section-inner__description lock">Zoomの使い方，問題発生時の対処法などについて記してあります．</p>
+                <button class="button btn_lock" type="button" onclick="location.href='https://drive.google.com/uc?export=download&id=1kNFdgeKFn7JRINdx7fTMavMba1mJ5fQS'">マニュアルのダウンロード</button>
+            </div>
+        </div>
+    </div>
+    <div id="Entry">
+        <div class="section-wrapper">
+            <div class="section-inner">
+                    <!-- <p class="section-inner__description">7月1日(水)公開予定</p> -->
+                <p class="section-inner__description">参加をご希望の方は下記のエントリーよりご応募ください．</p>
+                <button class="button button--lg" type="button" onclick="window.open('https://tsw2020.teamdigicom.net/registrationForm')">エントリー</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="line"></div>
+            <p class="footer__description">
+                愛知工業大学 〒470-0392 愛知県豊田市八草町八千草1247
+                <br>
+                ©︎ 2020 Shunsuke Funada
+            </p>
+        </div>
+    </footer>
+    <script>
+        var rellax = new Rellax('.rellax', {
+            center: true,
+        });
+    </script>
+</body>
+</html>

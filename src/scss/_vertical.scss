@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.vertical {
+    display: none;
+    position: relative;
+    width: 420px;
+    margin: 0 auto;
+
+    @include md {
+        display: block;
+    }
+
+    &__sentence {
+        position: absolute;
+        writing-mode: vertical-rl;
+        font-weight: 700;
+        white-space: nowrap;
+        color: #f9f9fb;
+        z-index: -10;
+        font-size: 12rem;
+
+        @include md {
+            font-size: 14rem;
+        }
+
+        @include lg {
+            font-size: 16rem;
+        }
+
+        &--left {
+            top: 20rem;
+            left: 16rem;
+
+            @include md {
+                top: 40rem;
+                left: 18rem;
+            }
+
+            @include lg {
+                top: 30rem;
+                left: 26rem;
+            }
+        }
+
+        &--right {
+            top: 30rem;
+            left: 32rem;
+
+            @include md {
+                top: 50rem;
+                left: 38rem;
+            }
+
+            @include lg{
+                top: 50rem;
+                left: 46rem;
+            }
+        }
+    }
+}

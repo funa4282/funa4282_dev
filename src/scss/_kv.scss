@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.kv {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 100px;
+
+    @include lg {
+        margin-bottom: 0;
+    }
+
+    &__bg {
+        height: 100%;
+        background: url(../images/workshop.jpg) no-repeat center/cover;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+
+        @include lg {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            margin-left: auto;
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    &__text-block {
+        position: absolute;
+        bottom: 140px;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+
+        @include lg {
+            transform: none;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        letter-spacing: .04em;
+        font-weight: 700;
+        font-size: 24px;
+        font-family: 'Lato', sans-serif;
+
+        @include md {
+            font-size: 40px;
+            // width: 200%;
+        }
+
+        @include lg {
+            text-align: left;
+            letter-spacing: .08em;
+            font-size: 64px;
+            width: 100%;
+        }
+
+        &--white {
+            color: #fff;
+
+            @include lg {
+                bottom: 12.5%;
+                left: -12.5%;
+            }
+        }
+
+        &--navy {
+            display: none;
+
+            @include md {
+                width: 200%;
+            }
+
+            @include lg {
+                display: block;
+                bottom: 30%;
+                left: 10%;
+                max-width: 90%;
+                width: 100%;
+            }
+        }
+    }
+
+    @include md {
+        &__text-inner {
+            overflow: hidden;
+            width: 50%;
+        }
+    }
+
+    @include lg {
+        &__text-inner {
+            width: 100%;
+        }
+    }
+}

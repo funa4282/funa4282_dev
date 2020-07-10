@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.parallax {
+    position: absolute;
+    display: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+
+    @include md {
+        display: block;
+    }
+
+    &--1 {
+        display: none;
+
+        @include lg {
+            display: block;
+            max-width: 480px;
+            // right: 30%;
+            left: 40%;
+            margin-top: -30px;
+        }
+    }
+
+    &--2 {
+        max-width: 480px;
+        // right: -20px;
+        left: 20px;
+        margin-top: 60px;
+
+        @include lg {
+            right: 0;
+            margin-top: 140px;
+    }
+    }
+
+    &--3 {
+        max-width: 320px;
+        right: -12%;
+        margin-top: 20px;
+
+        @include lg {
+            max-width: 380px;
+            right: -10%;
+        }
+    }
+
+    &--4 {
+        max-width: 320px;
+        right: -4%;
+        margin-top: 160px;
+
+        @include lg {
+            max-width: 380px;
+            right: 12%;
+        }
+    }
+}
