@@ -32,11 +32,11 @@
     "imagemin-pngquant": "^9.0.0",
     "imagemin-svgo": "^8.0.0",
     "node-sass": "^4.14.1",
-    "ts-loader": "^6.2.2",
+    "ts-loader": "^9.4.2",
     "typescript": "^3.9.5",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-stream": "^7.0.0"
   },
   "browserslist": [
     "last 2 versions",
